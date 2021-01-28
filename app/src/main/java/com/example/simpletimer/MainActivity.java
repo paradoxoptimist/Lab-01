@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CountDownTimer countDownTimer;
+    private MyCountDownTimer countDownTimer;
     private long timeElapsed;
     private boolean timerHasStarted = false;
     private Button startB;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startB.setOnClickListener(this);
         text = (TextView) this.findViewById(R.id.timer);
         timeElapsedView = (TextView) this.findViewById(R.id.timeElapsed);
-        countDownTimer = new CountDownTimer(startTime, interval);
+        countDownTimer = new MyCountDownTimer(startTime, interval);
         text.setText(text.getText() + String.valueOf(startTime));
     }
 
